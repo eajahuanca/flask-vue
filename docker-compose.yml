@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  frontend:
+    hostname: frontend
+    image: vueapp:latest
+    ports:
+      - "8080:8080"
+    links:
+      - backend
+  backend:
+    hostname: backend
+    image: flaskapp:latest
+    ports:
+      - "5000:5000"
